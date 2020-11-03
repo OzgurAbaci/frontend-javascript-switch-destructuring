@@ -8,7 +8,22 @@
 // calculate(5, 7, 'subtract') geeft -2
 // calculate(25, 5, 'divide') geeft 5
 
+function calculate(a, b, operator){
+    switch (operator) {
+        case 'add':
+            return a+b;
+        case 'substract':
+            return a-b;
+        case 'multiply':
+            return a*b;
+        case 'divide':
+            return a/b;
+        default:
+            return 0;
+    }
+}
 
+console.log(calculate(2, 4, 'add'));
 
 
 // Opdracht 2: schrijf een functie getErrorMessage die de parameter errorcode verwacht en de bijbehorende error message teruggeeft.
@@ -22,4 +37,21 @@
 // getErrorMessage(0) geeft "Geen watertoevoer"
 // getErrorMessage(4) geeft "Geen druk"
 
+function getErrorMessage(errorcode){
+    switch (errorcode){
+        case 0:
+            return "Geen watertoevoer";
+        case 1:
+            return "Temperatuur te hoog";
+        case 2:
+            return "Koffiebonen op";
+        case 3:
+            return "Afvalbak vol";
+        case 4:
+            return "Geen druk";
+        default:
+            return "Unknown error";
+    }
+}
 
+console.log(getErrorMessage(0));
